@@ -56,23 +56,6 @@ let start = setTimeout(() => {
     sections[0].classList.add('on');
   }, 500);
 
-//section 다섯번째페이지에 공굴러간다
-  sections[4].addEventListener('transitionend', () => {
-    if (sections[4].classList.contains('on')) {
-      const animateMotion = sections[4].querySelector('animateMotion');
-      if (animateMotion) {
-        animateMotion.beginElement();
-      }
-    }
-  });
-  sections[sections.length-1].addEventListener('transitionend', () => {
-    if (sections[sections.length-1].classList.contains('on')) {
-      const animateMotion = sections[sections.length-1].querySelector('animateMotion');
-      if (animateMotion) {
-        animateMotion.beginElement();
-      }
-    }
-  });
 // 스크롤바 컬러 체인지 & 없애기
 const scrollBarEllipse = document.querySelector(".scrollBarEllipse")
 const scrollBarArrow = document.querySelector(".scrollBarArrow")
@@ -127,20 +110,20 @@ const contactMenu = document.querySelector(".contactMenu");
 
 //해당 메뉴버튼 누르면 그 해당 페이지로 이동해야하고 (remove open), (scroll해당 content top값 입력),
 // aboutMenu
-aboutMenu.addEventListener("click",e=>{ //content5
+aboutMenu.addEventListener("click",e=>{ //content2
   e.preventDefault();
   menuInside.classList.remove("open");
   menuFrame.classList.remove("open");
   scrollBar.classList.remove("open");
   window.scroll({
-    top:4*devHeight,
+    top:1*devHeight,
     left:0,
     behavior:'smooth'
   });
   sections.forEach(item =>{
     item.classList.remove("on");
   })
-  sections[4].classList.add("on")
+  sections[1].classList.add("on")
 });
 
 // contactMenu
@@ -161,20 +144,20 @@ contactMenu.addEventListener("click",e=>{ //contentLast
 });
 
 // worKMenu
-workMenu.addEventListener("click",e=>{ //content7...
+workMenu.addEventListener("click",e=>{ //content4
   e.preventDefault();
   menuInside.classList.remove("open");
   menuFrame.classList.remove("open");
   scrollBar.classList.remove("open");
   window.scroll({
-    top:(6)*devHeight,
+    top:(3)*devHeight,
     left:0,
     behavior:'smooth'
   });
   sections.forEach(item =>{
     item.classList.remove("on");
   })
-  sections[6].classList.add("on")
+  sections[3].classList.add("on")
 });
 
 //validation 창 열고 닫기
