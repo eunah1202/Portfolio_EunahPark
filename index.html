@@ -5,7 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Eunah's portfolio</title>
 <link rel="stylesheet" href="./css/main.css">
-<script src="./js/jquery-1.12.3.js"></script>
+<!-- swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- //swiper -->
+<script defer src="./js/jquery-1.12.3.js"></script>
 <script defer src="./js/main.js"></script>
 </head>
 <body>
@@ -31,12 +35,12 @@
       <div class="circleLine"><img src="./img/circle.png" alt="돌아가는 동그라미"></div>
       <div class="slide Left">
         <div class="slideFrame">
-          <p class="slideTrack Left">Responsible &nbsp; Curious &nbsp; Adaptable &nbsp; Collaborative</p>
+          <p class="slideTrack Left">Responsible &nbsp; Curious &nbsp; Adaptable &nbsp; Collaborative </p>
         </div>
       </div>
       <div class="profile">
         <div class="profileTxt1">
-          <img src="" alt="프로필사진">
+          <img class="blind"src="" alt="프로필사진">
           <p>Eunah Park</p>
           <p>안 된다는 생각보다 된다는 가능성을 믿고, 더 나은 발전을 위해 꾸준하게 노력하겠습니다!</p>
         </div>
@@ -468,15 +472,29 @@
           <span>06</span>
           <span>Design</span> 
         </div>
-        <div class="design_bottom">
-          <ul class="design_frame">
-            <li><img src="./img/2023한복쇼.jpg" alt="2023한복쇼"></li>
-            <li><img src="./img/BONDEE.jpg" alt="BONDEE"></li>
-            <li><img src="./img/ZEPETO.jpg" alt="ZEPETO"></li>
-            <li><img src="./img/CHANEL.png" alt="CHANEL"></li>
-            <li><img src="./img/ZARA.jpg" alt="ZARA"></li>
-          </ul>
+      <!-- Slider main container -->
+      <div class="swiper mySwiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><img src="./img/2023한복쇼.jpg" alt="2023한복쇼"></div>
+          <div class="swiper-slide"><img src="./img/BONDEE.jpg" alt="BONDEE"></div>
+          <div class="swiper-slide"><img src="./img/ZEPETO.jpg" alt="ZEPETO"></div>
+          <div class="swiper-slide"><img src="./img/CHANEL.png" alt="CHANEL"></div>
+          <div class="swiper-slide"><img src="./img/ZARA.jpg" alt="ZARA"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
         </div>
+        <!--pagination -->
+        <div class="swiper-pagination active"></div>
+
+        <!--navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
       </div>
     </section>
   </div>
