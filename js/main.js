@@ -10,10 +10,17 @@ let devHeight = window.innerHeight;
 window.addEventListener("resize", () =>{
   devHeight = window.innerHeight;
 });
+// 현재 body의 width값 가져오기
+let bnnW = document.body.clientWidth;
 
 // contents의 height 지정해주기
 for(let i=0; i<contents.length; i++){
+  if(bnnW>768){
     contents[i].style.height = devHeight+ "px";
+  }
+  else{
+    contents[i].style.height = contents[i].getAttribute;
+  }
 }
 // 함수정의
 let activation=(element)=>{
@@ -200,3 +207,55 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: '.swiper-button-prev',
   }
 });
+
+window.addEventListener("scroll",()=>{
+  let scroll=window.scrollY;
+  console.log(scroll);
+
+  // content2
+  if(scroll>120){
+    let content2Img = document.querySelector(".content2>section>.profile>.profileTxt1>img");
+    let content2P1 = document.querySelector(".content2>section>.profile>.profileTxt1>p:first-of-type");
+    let content2P2 = document.querySelector(".content2>section>.profile>.profileTxt1>p:last-of-type");
+    content2Img.classList.add("scroll")
+    content2P1.classList.add("scroll")
+    content2P2.classList.add("scroll")
+  }
+  if(scroll>485){
+    let content2Dl = document.querySelectorAll(".content2>section>.profile>.profileTxt2>dl");
+    content2Dl.forEach((sibling, index) => {
+      switch (index) {
+        case 0:
+          sibling.classList.add("scroll"); // 첫 번째 형제에 대한 작업
+          break;
+        case 1:
+          sibling.classList.add("scroll"); // 두 번째 형제에 대한 작업
+          break;
+        default:
+          sibling.classList.add("scroll");// 그 외의 형제에 대한 작업
+          break;
+      }
+    })
+  }
+  // content3
+  if(scroll>680){
+    let profileMainTxt = document.querySelector(".content3>section>.profileMainTxt");
+    profileMainTxt.classList.add("scroll");
+  }
+  if(scroll>760){
+    let content3Ul = document.querySelectorAll(".content3>section>.profileSubTxt>ul>li ul")
+    content3Ul.forEach((sibling, index) => {
+      switch (index) {
+        case 0:
+          sibling.classList.add("scroll"); // 첫 번째 형제에 대한 작업
+          break;
+        case 1:
+          sibling.classList.add("scroll"); // 두 번째 형제에 대한 작업
+          break;
+        default:
+          sibling.classList.add("scroll");// 그 외의 형제에 대한 작업
+          break;
+      }
+    })
+  }
+})
