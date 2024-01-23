@@ -208,6 +208,7 @@ var swiper = new Swiper(".mySwiper", {
   }
 });
 
+// scroll시 on 붙이기
 window.addEventListener("scroll",()=>{
   let scroll=window.scrollY;
   console.log(scroll);
@@ -258,4 +259,27 @@ window.addEventListener("scroll",()=>{
       }
     })
   }
-})
+});
+
+// 터치 이벤트가 발생한 섹션에 'on' 클래스 추가하는 함수
+function handleTouch(event) {
+    // 터치 이벤트가 발생한 섹션 찾기
+    let touchedSection = event.target.closest('section');
+
+    // 기존에 'on' 클래스를 가진 섹션 찾기
+    let currentOnSection = document.querySelector('section.on');
+
+    // 현재 'on' 클래스를 가진 섹션이 있으면 제거
+    if (currentOnSection) {
+        currentOnSection.classList.remove('on');
+    }
+
+    // 터치 이벤트가 발생한 섹션에 'on' 클래스 추가
+    if (touchedSection) {
+        touchedSection.classList.add('on');
+    }
+}
+
+// 터치 이벤트에 대한 리스너 등록
+document.addEventListener('touchstart', handleTouch);
+

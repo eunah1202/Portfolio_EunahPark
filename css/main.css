@@ -729,23 +729,23 @@ div.scrollBar>.scrollBarNext>.scrollBarArrow>svg>.path_scroll.orange{fill:#DF6D5
 
 /* 좌우 text 슬라이드 -content3 공통*/
 .slide{position:absolute;z-index:10;width:5vw;height:100%;overflow:hidden;}
-.slide.Left{top:0;left:0;border-right:5px solid #333;}
-.slide.Right{top:0;right:0;padding-right:17px;border-left:5px solid #333;}
+.slide.Left{top:0;left:0;border-right:2px solid #ddd;}
+.slide.Right{top:0;right:0;padding-right:17px;border-left:4px solid #828282;}
 
 .slide .slideFrame{width:100%;height:100%;background:linear-gradient(#F5765D 0%, #A1D2CD 50%, #D172C7 100%);}
 .content3 .slide .slideFrame{background:linear-gradient(45deg,#F5765D 0%, #A1D2CD 50%, #D172C7 100%);}
 .slide .slideFrame.Right{background:linear-gradient(45deg,#F5765D 0%, #A1D2CD 50%, #D172C7 100%);}
 .content3 .slide .slideFrame.Right{width:100%;height:100%;background:linear-gradient(#F5765D 0%, #A1D2CD 50%, #D172C7 100%);}
 
-.slide .slideFrame .slideTrack{position:absolute;rotate:90deg;width:5vw;white-space:nowrap;font-size:3.5vw;font-weight:700;color:#fff;transition:color 1s ease 0s;}
+.slide .slideFrame .slideTrack{position:absolute;rotate:90deg;width:5vw;white-space:nowrap;font-size:2.5vw;font-weight:700;color:#fff;transition:color 1s ease 0s;}
 .slide .slideFrame .slideTrack.Left{rotate:-90deg;animation:move1 8s linear infinite;}
 .slide .slideFrame .slideTrack.Right{rotate:-90deg;animation:move2 20s linear infinite;}
 .slide .slideFrame:hover .slideTrack{color:#333;font-weight:800;animation-play-state:paused;}
 @keyframes move1{
     0%{bottom:3%;opacity:0;}
     3%{bottom:3%;opacity:1;}
-    90%{bottom:-65%;opacity:1;}
-    100%{bottom:-65%;opacity:0;}
+    90%{bottom:-45%;opacity:1;}
+    100%{bottom:-45%;opacity:0;}
 }
 @keyframes move2{
     0%{bottom:3%;opacity:0;}
