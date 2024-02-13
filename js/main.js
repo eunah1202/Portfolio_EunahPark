@@ -171,8 +171,10 @@ workMenu.addEventListener("click",e=>{ //content4
 $(function(){
   var validationBtnOpen = $('.validationBtnOpen');
   var validation = $('.validation');
+
   validationBtnOpen.click(function(){
     validation.show();
+
     return false;
   });
 });
@@ -186,18 +188,39 @@ $(function(){
   });
 });
 
+// validation 창 내 tabMenu
+const tabMenu = document.querySelectorAll(".validation > ul.tab_menu > li");
+const tabArticle = document.querySelectorAll(".validation > div.tab_article > ul > li");
+
+tabMenu.forEach((tab, index) => {
+  tab.addEventListener("click", e => {
+    e.preventDefault();
+    
+    // 모든 tabMenu 클래스 on 제거
+    tabMenu.forEach(item => item.classList.remove("on"));
+    // 모든 tabArticle 숨기기
+    tabArticle.forEach(item => item.style.display = "none");
+    
+    // 클릭한 tab에 클래스 on 추가
+    tab.classList.add("on");
+    // 클릭한 tab에 해당하는 tabArticle 보이기
+    tabArticle[index].style.display = "block";
+  });
+});
+
+
 // swiper
 var swiper = new Swiper(".mySwiper", {
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: "auto",
+  slidesPerView: "4",
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
-    depth: 500,
+    depth: 300,
     modifier: 1,
-    slideShadows:true,
+    slideShadows:false,
   },
   pagination: {
     el: ".swiper-pagination",
