@@ -707,8 +707,8 @@ div.scrollBar>.scrollBarNext>.scrollBarArrow>svg>.path_scroll.orange{fill:#DF6D5
 /* profileTxt1 */
 .content2>section>.profile>.profileTxt1{position:relative;width:100%;height:40%;box-sizing:border-box;}
 .content2>section>.profile>.profileTxt1:after{content:'';display:block;clear:both;}
-.content2>section>.profile>.profileTxt1>img{opacity:0;position:absolute;width:220px;height:220px;top:20px;left:60px;border-radius:50px;background:#fff;transform:translateY(70px);transition:transform 1s linear 0.2s;}
-.content2>section>.profile>.profileTxt1 p{opacity:0;position:absolute;left:25vw;top:-30px;font-size:10vh;padding-top:19vh;color:#333;font-weight:bold;transform:translateY(70px);transition:transform 2s linear 0.5s;}
+.content2>section>.profile>.profileTxt1>img{opacity:0;position:absolute;height:350px;top:20px;left:100px;border-radius:50px;background:#fff;transform:translateY(70px);transition:transform 1s linear 0.2s;}
+.content2>section>.profile>.profileTxt1 p{opacity:0;position:absolute;left:22vw;top:-30px;font-size:10vh;padding-top:19vh;color:#333;font-weight:bold;transform:translateY(70px);transition:transform 2s linear 0.5s;}
 .content2>section>.profile>.profileTxt1 p:last-of-type{font-size:3vh;padding-top:15vh;transition:transform 2s linear 0.2s;}
 
 .content2>section.on>.profile>.profileTxt1>img, .content2>section.on>.profile>.profileTxt1>p{opacity:1;transform:translateY(0);}
@@ -847,7 +847,7 @@ div.scrollBar>.scrollBarNext>.scrollBarArrow>svg>.path_scroll.orange{fill:#DF6D5
 .content6>section>.work_page>.page_right>ul>li>ul.project_concept>li{border:1px solid #055b80;background:#fff;color:#055b80;}
 
 /* content7 -margiela*/
-.content7>section>.work_page>.page_left>.page_img>div>img{width:90%;height:90%;}
+/* .content7>section>.work_page>.page_left>.page_img>div>img{width:90%;height:90%;}
 
 .content7>section>.work_page>.page_left>.page_index span{color:#826e6d;}
 .content7>section>.work_page>.page_left>.page_list>ul>li{background:#826e6d;border:1px solid transparent;}
@@ -856,7 +856,7 @@ div.scrollBar>.scrollBarNext>.scrollBarArrow>svg>.path_scroll.orange{fill:#DF6D5
 
 .content7>section>.work_page>.page_right>ul>li{color:#826e6d;}
 .content7>section>.work_page>.page_right>ul>li:after{background:#826e6d;}
-.content7>section>.work_page>.page_right>ul>li>ul.project_concept>li{border:1px solid #826e6d;background:#fff;color:#826e6d;}
+.content7>section>.work_page>.page_right>ul>li>ul.project_concept>li{border:1px solid #826e6d;background:#fff;color:#826e6d;} */
 
 /* content8 -design*/
 .content8>section>.work_page{display:flex;flex-flow:column nowrap;justify-content:start;}
